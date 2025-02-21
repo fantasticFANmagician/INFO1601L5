@@ -71,16 +71,21 @@ function getAssignmentMark(student, course, num){
 }
 
 function averageAssessment(students, courseName, assignment){
-  for(let record of students.transcript){
-    if (record.course === course){
-      let sum = 0;
-      if(num >= 0 && num < record.grades.length){
-        sum += grade; 
+  let sum = 0;
+  let count = 0;
+  
+  for(let student of students){
+    for(let record of student.transcript){
+      if (record.course === courseName){
+        if(assignment >= 0 && assignment < record.grades.length){
+          sum += record.grades[assignment];
+          count++;
+        }
       }
-      return sum/ record.grades.length;
     }
   }
-  return -1;
+  
+  return count > 0 ? sum / count : -1;
 }
 
   console.log (getAverageGrade(bob,'INFO 1603'));
