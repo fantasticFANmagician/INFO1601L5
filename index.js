@@ -58,12 +58,12 @@ function getAverageGrade(student, course){
   return -1;
 }
 
-
-function avgBMI(people) {
-  let sum = 0;
-  for (let person of people) {
-    //sum the bmi of each person
-    sum += calcBMI(person.weight, person.height);
+function getAssignmentMark(student, course, num){
+  for(let record of student.transcript){
+    if (record.course === course){
+      
+    }
   }
+}
 
-  console.log (getAverageGrade(bob,INFO 1603))
+  console.log (getAverageGrade(bob,'INFO 1603'))
