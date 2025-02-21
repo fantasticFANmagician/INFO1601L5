@@ -66,4 +66,5 @@ function avgBMI(people) {
     sum += calcBMI(person.weight, person.height);
   }
 
-  console.log (getAverageGrade(bob,INFO 1603))
+  console.log(getAverageGrade(bob, 'INFO 1603'));
+}
