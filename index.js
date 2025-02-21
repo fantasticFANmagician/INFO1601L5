@@ -61,9 +61,13 @@ function getAverageGrade(student, course){
 function getAssignmentMark(student, course, num){
   for(let record of student.transcript){
     if (record.course === course){
-      
+      if(num >= 0 && num < record.grades.length){
+        return record.grades[num];
+      }
+      return -1;
     }
   }
+  return -1;
 }
 
   console.log (getAverageGrade(bob,'INFO 1603'))
