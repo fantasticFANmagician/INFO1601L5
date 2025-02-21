@@ -90,4 +90,4 @@ function averageAssessment(students, courseName, assignment){
 
   console.log (getAverageGrade(bob,'INFO 1603'));
   console.log (getAssignmentMark(bob,'INFO 1603',0));
-  console.log (averageAssessment(students,'INFO 1603',0))
+  console.log (averageAssessment(students,'INFO 1601',0))
